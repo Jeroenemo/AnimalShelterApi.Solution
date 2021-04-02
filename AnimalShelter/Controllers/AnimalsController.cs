@@ -88,6 +88,7 @@ namespace AnimalShelter.Controllers
         [HttpPost]
         public async Task<ActionResult<Animal>> Post(Animal animal)
         {
+            animal.Admitted = DateTime.Now;
             _db.Animals.Add(animal);
             await _db.SaveChangesAsync();
 
