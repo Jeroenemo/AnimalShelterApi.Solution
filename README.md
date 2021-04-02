@@ -19,20 +19,20 @@
     </p>
     <!-- Project Shields -->
     <p align="center">
-        <a href="https://github.com/Jeroenemo/AnimalShelterAPI/graphs/contributors">
-            <img src="https://img.shields.io/github/contributors/Jeroenemo/AnimalShelterAPI.svg?style=plastic">
+        <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/Jeroenemo/AnimalShelterAPI.Solution.svg?style=plastic">
         </a>
         ¨
-        <a href="https://github.com/Jeroenemo/AnimalShelterAPI/stargazers">
-            <img src="https://img.shields.io/github/stars/Jeroenemo/AnimalShelterAPI.svg?color=yellow&style=plastic">
+        <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution/stargazers">
+            <img src="https://img.shields.io/github/stars/Jeroenemo/AnimalShelterAPI.Solution.svg?color=yellow&style=plastic">
         </a>
         ¨
-        <a href="https://github.com/Jeroenemo/AnimalShelterAPI/issues">
-            <img src="https://img.shields.io/github/issues/Jeroenemo/AnimalShelterAPI?style=plastic">
+        <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution/issues">
+            <img src="https://img.shields.io/github/issues/Jeroenemo/AnimalShelterAPI.Solution?style=plastic">
         </a>
         ¨
         <a href="https://github.com/Jeroenemo/Best-ReadMe-Template/blob/master/LICENSE.txt">
-            <img src="https://img.shields.io/github/license/Jeroenemo/AnimalShelterAPI?color=orange&style=plastic">
+            <img src="https://img.shields.io/github/license/Jeroenemo/AnimalShelterAPI.Solution?color=orange&style=plastic">
         </a>
         ¨
         <a href="https://linkedin.com/in/Jeroenemo">
