@@ -6,7 +6,7 @@
     <!-- Project Avatar/Logo -->
     <br>
     <a href="https://github.com/LunsfordSpace">
-        <img src="https://avatars.githubusercontent.com/u/64109457?v=4">
+        <img border-radius="50%;" src="https://avatars.githubusercontent.com/u/64109457?v=4">
     </a>
     <p align="center">
       ___________________________
