@@ -20,7 +20,6 @@ namespace AnimalShelter.Controllers
             _db = db;
         }
 
-        // GET: api/Animals
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string gender, string name)
         {
@@ -42,6 +41,19 @@ namespace AnimalShelter.Controllers
             }
 
             return await query.ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Animal>> GetAnimal(int id)
+        {
+            var animal = await _db.Animals.FindAsync(id);
+
+            if (animal == null)
+            {
+                return NotFound();
+            }
+
+            return animal;
         }
     }
 }
