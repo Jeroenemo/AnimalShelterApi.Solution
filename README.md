@@ -47,29 +47,13 @@
 
 <!-- Project Links -->
 <p align="center">
-    <a href="https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution-API-ReadMe-Example"><big>Project Docs</big></a> ·
-    <a href="https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution-API-ReadMe-Example/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution-API-ReadMe-Example/issues"><big>Request Feature</big></a>
+    <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution"><big>Project Docs</big></a> ·
+    <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution/issues"><big>Report Bug</big></a> ·
+    <a href="https://github.com/Jeroenemo/AnimalShelterAPI.Solution/issues"><big>Request Feature</big></a>
 </p>
 
 ------------------------------
-### <u>Table of Contents</u>
-* <a href="#🌐-about-the-project">About the Project</a>
-    * <a href="#📖-description">Description</a>
-    * <a href="#🦠-known-bugs">Known Bugs</a>
-    * <a href="#🛠-built-with">Built With</a>
-    <!-- * <a href="#🔍-preview">Preview</a> -->
-* <a href="#🏁-getting-started">Getting Started</a>
-    * <a href="#📋-prerequisites">Prerequisites</a>
-    * <a href="#⚙️-setup-and-use">Setup and Use</a>
-* <a href="#🛰️-api-documentation">API Documentation</a>
-* <a href="#🤝-contributors">Auxiliary</a>
-    * <a href="#🤝-contributors">Contributors</a>
-    * <a href="#✉️-contact-and-support">Contact</a>
-    * <a href="#⚖️-license">License</a>
-    * <a href="#🌟-acknowledgements">Acknowledgements</a>
-    
-------------------------------
+
 
 ## 🌐 About the Project
 
@@ -81,11 +65,10 @@ An API that functions as a recipe archive for coffee drinks from around the worl
 * This is not a real API, which is the greatest shame of all.
 
 ### 🛠 Built With
-* [Ubuntu 18.04.5 LTS](https://releases.ubuntu.com/18.04/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1)
-* [MySQL 8.0.20 for Linux](https://dev.mysql.com/)
+* [MySQL](https://dev.mysql.com/)
 * [Entity Framework Core 2.2.6](https://docs.microsoft.com/en-us/ef/core/)
 * [Swagger - NSwag 13.3.0](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.1&tabs=visual-studio)
 * [Postman](postman.com)
