@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using MessageBoard.Models;
+using AnimalShelter.Models;
 
-namespace MessageBoard
+namespace AnimalShelter
 {
     public class Startup
     {
@@ -19,7 +19,7 @@ namespace MessageBoard
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MessageBoardContext>(opt =>
+            services.AddDbContext<AnimalShelterContext>(opt =>
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
             services.AddControllers();
         }
