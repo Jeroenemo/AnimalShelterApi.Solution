@@ -70,7 +70,7 @@ An API that functions as a recipe archive for coffee drinks from around the worl
 * [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1)
 * [MySQL](https://dev.mysql.com/)
 * [Entity Framework Core 2.2.6](https://docs.microsoft.com/en-us/ef/core/)
-* [Swagger - NSwag 13.3.0](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.1&tabs=visual-studio)
+* [Swagger - Swashbuckle 5.6.3](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio)
 * [Postman](postman.com)
 
 <!-- ### 🔍 Preview -->
@@ -111,25 +111,25 @@ An API that functions as a recipe archive for coffee drinks from around the worl
 
   #### Cloning
 
-  1) Navigate to the [LunsfordSpace CoffeeTracker API repository here](https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution-API-ReadMe-Example).
+  1) Navigate to the [Animal Shelter API repository here](https://github.com/Jeroenemo/AnimalShelterAPI.Solution).
   2) Click 'Clone or download' to reveal the HTTPS url ending with .git and the 'Download ZIP' option.
   3) Open up your system Terminal or GitBash, navigate to your desktop with the command: `cd Desktop`, or whichever location suits you best.
-  4) Clone the repository to your desktop: `$ git clone https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution.git`
-  5) Run the command `cd CoffeeTrackerAPI.Solution` to enter into the project directory.
+  4) Clone the repository to your desktop: `$ git clone https://github.com/Jeroenemo/AnimalShelterAPI.Solution.git`
+  5) Run the command `cd AnimalShelterAPI.Solution` to enter into the project directory.
   6) View or Edit:
       * Code Editor - Run the command `atom .` or `code .` to open the project in Atom or VisualStudio Code respectively for review and editing.
       * Text Editor - Open by double clicking on any of the files to open in a text editor.
 
   #### Download
 
-  1) Navigate to the [LunsfordSpace CoffeeTracker API repository here](https://github.com/LunsfordSpace/CoffeeTrackerAPI.Solution-API-ReadMe-Example).
+  1) Navigate to the [Animal Shelter API repository here](https://github.com/Jeroenemo/AnimalShelterAPI.Solution).
   2) Click 'Clone or download' to reveal the HTTPS url ending with .git and the 'Download ZIP' option.
   3) Click 'Download ZIP' and unextract.
   4) Open by double clicking on any of the files to open in a text editor.
 
   #### AppSettings
 
-  1) Create a new file in the CoffeeTrackerAPI.Solution/CoffeeTrackerAPI directory named `appsettings.json`
+  1) Create a new file in the AnimalShelterAPI.Solution/AnimalShelter directory named `appsettings.json`
   2) Add in the following code snippet to the new appsettings.json file:
   
   ```
@@ -141,19 +141,19 @@ An API that functions as a recipe archive for coffee drinks from around the worl
     },
     "AllowedHosts": "*",
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=coffee_tracker_api;uid=root;pwd=YourPassword;"
+        "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid=root;pwd=YourPassword;"
     }
 }
   ```
   3) Change the server, port, and user id as necessary. Replace 'YourPassword' with relevant MySQL password (set at installation of MySQL).
 
   #### Database
-  1) Navigate to CoffeeTrackerAPI.Solution/CoffeeTrackerAPI directory using the MacOS Terminal or Windows Powershell (e.g. `cd Desktop/CoffeeTrackerAPI.Solution/CoffeeTrackerAPI`).
+  1) Navigate to AnimalShelterAPI.Solution/AnimalShelter directory using the MacOS Terminal or Windows Powershell (e.g. `cd Desktop/AnimalShelterAPI.Solution/AnimalShelter`).
   2) Run the command `dotnet ef database update` to generate the database through Entity Framework Core.
   3) (Optional) To update the database with any changes to the code, run the command `dotnet ef migrations add <MigrationsName>` which will use Entity Framework Core's code-first principle to generate a database update. After, run the previous command `dotnet ef database update` to update the database.
 
   #### Launch the API
-  1) Navigate to CoffeeTrackerAPI.Solution/CoffeeTrackerAPI directory using the MacOS Terminal or Windows Powershell (e.g. `cd Desktop/CoffeeTrackerAPI.Solution/CoffeeTrackerAPI`).
+  1) Navigate to AnimalShelterAPI.Solution/AnimalShelter directory using the MacOS Terminal or Windows Powershell (e.g. `cd Desktop/AnimalShelterAPI.Solution/AnimalShelter`).
   2) Run the command `dotnet run` to have access to the API in Postman or browser.
 
 ------------------------------
@@ -162,7 +162,7 @@ An API that functions as a recipe archive for coffee drinks from around the worl
 Explore the API endpoints in Postman or a browser. You will not be able to utilize authentication in a browser.
 
 ### Using Swagger Documentation 
-To explore the CoffeeTracker API with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger`
+To explore the Animal Shelter API with Swashbuckle, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/`
 
 ### Using the JSON Web Token
 In order to be authorized to use the POST, PUT, DELETE functionality of the API, please authenticate yourself through Postman.
