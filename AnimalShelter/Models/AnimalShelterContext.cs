@@ -20,5 +20,6 @@ namespace AnimalShelter.Models
         }
 
         public DbSet<Animal> Animals { get; set; }
+        public DbSet<Species> Species { get; set; }
     }
 }
