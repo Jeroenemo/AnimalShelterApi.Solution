@@ -5,7 +5,7 @@
 <p align="center">
     <!-- Project Avatar/Logo -->
     <br>
-    <a href="https://github.com/LunsfordSpace">
+    <a href="https://github.com/Jeroenemo">
         <img width="200" .circle src="https://avatars.githubusercontent.com/u/64109457?v=4">
     </a>
     <p align="center">
@@ -42,7 +42,7 @@
 </p>
 
 <p align="center">
-  <small>Initiated April 2nd, 2021.</small>
+  <small>Initiated April 2nd, 2021, Updated April 4th, 2021</small>
 </p>
 
 <!-- Project Links -->
