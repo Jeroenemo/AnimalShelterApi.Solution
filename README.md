@@ -58,11 +58,11 @@
 ## 🌐 About the Project
 
 ### 📖 Description
-An API that functions as a recipe archive for coffee drinks from around the world. It utilizes RESTful principles, version control, pagination, and has integrated authentication to keep the API Read-Only for all users except administrators. The user is able to see the in-use version of the API when using Postman.
+An API that functions as a animal archive for an animal shelter. It utilizes RESTful principles, swagger documentation, version control, and the user is able to see the in-use version of the API when using Postman.
 
 ### 🦠 Known Bugs
 
-* This is not a real API, which is the greatest shame of all.
+* No full CRUD for species controller, yet. 
 
 ### 🛠 Built With
 * [Visual Studio Code](https://code.visualstudio.com/)
