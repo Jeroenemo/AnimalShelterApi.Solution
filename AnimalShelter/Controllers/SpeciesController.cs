@@ -8,8 +8,9 @@ using System;
 
 namespace AnimalShelter.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("2.0")]  
+    [Route("api/[controller]")]
     public class SpeciesController : ControllerBase
     {
         private readonly AnimalShelterContext _db;
