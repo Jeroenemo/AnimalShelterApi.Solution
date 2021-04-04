@@ -199,7 +199,7 @@ https://localhost:5000/api/Species/donkey
 
 #### Sample JSON Response
 ```
-[
+
   {
     "speciesId": 3,
     "type": "Donkey",
@@ -214,116 +214,98 @@ https://localhost:5000/api/Species/donkey
       }
     ]
   }
+
+```
+
+..........................................................................................
+
+### Animals
+Access information on animals in the shelter.
+
+#### HTTP Request
+```
+GET /api/animal
+POST /api/animal
+GET /api/animal/{id}
+PUT /api/animal/{id}
+DELETE /api/animal/{id}
+```
+
+#### Path Parameters
+| Parameter | Type | Default | Required | Description |
+| :---: | :---: | :---: | :---: | --- |
+| name | string | none | false | Return matches by name.
+| age | integer | none | false | Return any animal with specific age. |
+| gender | string | none | false | Return any animal with specific gender. |
+
+#### Example Query
+```
+https://localhost:5000/api/animal/?age=3&gender=male
+```
+
+#### Sample JSON Response
+```
+{
+    "animalId": 1,
+    "name": "Attila",
+    "age": 3,
+    "gender": "Male",
+    "admitted": "2021-04-04T12:31:57",
+    "speciesId": 1
+  }
+```
+
+..........................................................................................
+
+### Species
+Access animals associated with a Species.
+
+#### HTTP Request
+```
+GET /api/Species
+POST /api/Species
+GET /api/Species/{type}
+PUT /api/beverage/{type}
+DELETE /api/beverage/{type}
+```
+
+#### Path Parameters
+| Parameter | Type | Default | Required | Description |
+| :---: | :---: | :---: | :---: | --- |
+| type | string | none | false | Return list of matches by species.
+
+
+#### Example Query
+```
+https://localhost:5000/api/species/chicken
+```
+
+#### Sample JSON Response
+```
+[
+  {
+    "speciesId": 2,
+    "type": "Chicken",
+    "animals": [
+      {
+        "animalId": 3,
+        "name": "Maple",
+        "age": 1,
+        "gender": "Female",
+        "admitted": "2021-04-04T12:31:57",
+        "speciesId": 2
+      },
+      {
+        "animalId": 4,
+        "name": "Beatrix",
+        "age": 2,
+        "gender": "Female",
+        "admitted": "2021-04-04T12:31:57",
+        "speciesId": 2
+      }
+    ]
+  }
 ]
-```
-
-..........................................................................................
-
-### Coffee Beans
-Access information on coffee beans from around the world.
-
-#### HTTP Request
-```
-GET /api/bean
-POST /api/bean
-GET /api/bean/{id}
-PUT /api/bean/{id}
-DELETE /api/bean/{id}
-```
-
-#### Path Parameters
-| Parameter | Type | Default | Required | Description |
-| :---: | :---: | :---: | :---: | --- |
-| name | string | none | false | Return matches by name.
-| origin | string | none | false | Return any bean from a specific country or region of origin. |
-| flavor | string | none | false | Return bean matches with a specific flavor profile. |
-
-#### Example Query
-```
-https://localhost:5000/api/bean/?origin=brazil&flavor=robust
-```
-
-#### Sample JSON Response
-```
-{
-    "Id": 114,
-    "Name": "Café Saboroso",
-    "Origin": "Brazil",
-    "Flavor: "Sweet, Cherry, Robust"
-}
-```
-
-..........................................................................................
-
-### Beverages
-Access information about popular coffee beverages.
-
-#### HTTP Request
-```
-GET /api/beverage
-POST /api/beverage
-GET /api/beverage/{id}
-PUT /api/beverage/{id}
-DELETE /api/beverage/{id}
-```
-
-#### Path Parameters
-| Parameter | Type | Default | Required | Description |
-| :---: | :---: | :---: | :---: | --- |
-| name | string | none | false | Return matches by name.
-| temp | string | none | false | Return beverage matches with a specific served temperature. |
-| topping | string | none | false | Return beverage matches with a specific topping. |
-| year | int | none | false | Return beverage matches with a specific year of invention. |
-
-#### Example Query
-```
-https://localhost:5000/api/beverage/?name=latte&temp=iced&year=1840
-```
-
-#### Sample JSON Response
-```
-{
-    "Id": 33,
-    "Name": "Iced Latte",
-    "Temp": "Iced",
-    "Topping: "Wipped Cream",
-    "Year": 1840
-}
-```
-
-..........................................................................................
-
-### Recipes
-Access recipes to recreate popular coffee beverages.
-
-#### HTTP Request
-```
-GET /api/recipe
-POST /api/recipe
-GET /api/recipe/{id}
-PUT /api/recipe/{id}
-DELETE /api/recipe/{id}
-```
-
-#### Path Parameters
-| Parameter | Type | Default | Required | Description |
-| :---: | :---: | :---: | :---: | --- |
-| name | string | none | false | Return matches by name.
-| ingredient | string | none | false | Return any recipe with a specific ingredient. |
-
-#### Example Query
-```
-https://localhost:5000/api/recipe/?name=latte&ingredient=chocolate
-```
-
-#### Sample JSON Response
-```
-{
-    "Id": 52,
-    "Name": "Mocha Latte",
-    "Ingredient": "Chocolate",
-    "Recipe Text: "Make good coffee, add chocolate, crash after experiencing the awesome power of both.",
-}
 ```
 
 ------------------------------
@@ -332,7 +314,7 @@ https://localhost:5000/api/recipe/?name=latte&ingredient=chocolate
 
 | Author | GitHub | Email |
 |--------|:------:|:-----:|
-| [Shawn Lunsford](https://linkedin.com/in/LunsfordSpace) | [LunsfordSpace](https://github.com/LunsfordSpace) |  [lunsford.sk@gmail.com](mailto:lunsford.sk@gmail.com) |
+| [Jeroen van Seeters](https://linkedin.com/in/jeroenvanseeters) | [Jeroenemo](https://github.com/jeroenemo) |  [vanseetersjeroen@gmail.com](mailto:vanseetersjeroen@gmail.com) |
 
 ------------------------------
 
@@ -349,12 +331,12 @@ If you have any feedback or concerns, please contact one of the contributors.
 
 ### ⚖️ License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2021 Shawn Lunsford. All Rights Reserved.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2021 Jeroen van Seeters. All Rights Reserved.
 
 ```
 MIT License
 
-Copyright (c) 2021 Shawn Lunsford.
+Copyright (c) 2021 Jeroen van Seeters.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
