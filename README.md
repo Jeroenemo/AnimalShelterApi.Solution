@@ -164,33 +164,12 @@ Explore the API endpoints in Postman or a browser. You will not be able to utili
 ### Using Swagger Documentation 
 To explore the Animal Shelter API with Swashbuckle, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/`
 
-### Using the JSON Web Token
-In order to be authorized to use the POST, PUT, DELETE functionality of the API, please authenticate yourself through Postman.
-* Open Postman and create a POST request using the URL: `http://localhost:5000/api/users/authenticate`
-* Add the following query to the request as raw data in the Body tab:
-```
-{
-    "UserName": "CoffeeAdmin",
-    "Password": "epicodus"
-}
-```
-* The token will be generated in the response. Copy and paste it as the Token paramenter in the Authorization tab.
-
-### Note on CORS
-CORS is a W3C standard that allows a server to relax the same-origin policy. It is not a security feature, CORS relaxes security. It allows a server to explicitly allow some cross-origin requests while rejecting others. An API is not safer by allowing CORS.
-For more information or to see how CORS functions, see the [Microsoft documentation](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.2#how-cors).
-
-### Note on Pagination
-The CoffeeTracker API returns a default of 25 results per page at a time, up to a maximum of 1000.
-
-To modify this, use the query parameters `limit` and `start` to alter the response results displayed. The `limit` parameter will specify how many results will be displayed, and the `start` parameter will specify which element in the response the limit should start counting.
-
 #### Example Query
 ```
-https://localhost:5000/api/beverage/?name=mocha&limit=200&start=20
+https://localhost:5001/api/Animals?name=attila
 ```
 
-To use default, _don't include_ `limit` and `start` or set them equal to zero.
+To use default, _don't include_ `type` or `id`.
 
 ..........................................................................................
 
