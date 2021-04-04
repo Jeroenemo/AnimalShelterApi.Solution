@@ -32,7 +32,7 @@
         </a>
         ¨
         <a href="https://github.com/Jeroenemo/Best-ReadMe-Template/blob/master/LICENSE.txt">
-            <img src="https://img.shields.io/github/license/Jeroenemo/AnimalShelterAPI.Solution?color=orange&style=plastic">
+            <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
         </a>
         ¨
         <a href="https://linkedin.com/in/Jeroenemo">
