@@ -21,7 +21,15 @@ namespace AnimalShelter.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Species>>> Get(string type)
+        public async Task<ActionResult<IEnumerable<Species>>> Get()
+        {
+            var query = _db.Species.Include(entry => entry.Animals).AsQueryable();
+
+            return await query.ToListAsync();
+        }
+
+        [HttpGet("{type}")]
+        public async Task<ActionResult<IEnumerable<Species>>> GetSpecies(string type)
         {
             var query = _db.Species.Include(entry => entry.Animals).AsQueryable();
 
@@ -29,21 +37,11 @@ namespace AnimalShelter.Controllers
             {
                 query = query.Where(entry => entry.Type == type);
             }
-            return await query.ToListAsync();
-        }
-
-        [HttpGet("{type}")]
-        public async Task<ActionResult<Species>> GetSpecies(string type)
-        {
-            var thisId = _db.Species.FirstOrDefault(entry => entry.Type == type).SpeciesId;
-            var Species = await _db.Species.FindAsync(thisId);
-
-            if (Species == null)
+            else
             {
                 return NotFound();
             }
-
-            return Species;
+            return await query.ToListAsync();
         }
 
         [HttpPost]
@@ -58,7 +56,7 @@ namespace AnimalShelter.Controllers
             _db.Species.Add(species);
             await _db.SaveChangesAsync();
         }
-        
+
         return CreatedAtAction("Post", new { id = species.SpeciesId }, species);
         }
     }

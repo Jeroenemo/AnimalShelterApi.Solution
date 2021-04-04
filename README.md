@@ -177,27 +177,44 @@ To use default, _don't include_ `type` or `id`.
 Base URL: `https://localhost:5000`
 
 #### HTTP Request Structure
+For Animals:
 ```
-GET /api/{component}
-POST /api/{component}
-GET /api/{component}/{id}
-PUT /api/{component}/{id}
-DELETE /api/{component}/{id}
+GET /api/Animals
+POST /api/Animals
+GET /api/Animals/{id}
+PUT /api/Animals/{id}
+DELETE /api/Animals/{id}
+```
+For Species:
+```
+GET /api/Species
+POST /api/Species
+GET /api/Species/{type}
 ```
 
 #### Example Query
 ```
-https://localhost:5000/api/recipe/131
+https://localhost:5000/api/Species/donkey
 ```
 
 #### Sample JSON Response
 ```
-{
-    "Id": 131,
-    "Name": "Spiced Cold Brew",
-    "Ingredient": "Cinnamon, Nutmeg, Cayenne",
-    "Recipe Text: "Coffee is the answer to all solutions in the known universe as proven by leading scientists.",
-}
+[
+  {
+    "speciesId": 3,
+    "type": "Donkey",
+    "animals": [
+      {
+        "animalId": 5,
+        "name": "Petunia",
+        "age": 12,
+        "gender": "Female",
+        "admitted": "2021-04-04T12:31:57",
+        "speciesId": 3
+      }
+    ]
+  }
+]
 ```
 
 ..........................................................................................
