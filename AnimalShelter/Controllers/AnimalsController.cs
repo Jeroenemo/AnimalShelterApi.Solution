@@ -21,14 +21,9 @@ namespace AnimalShelter.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, string gender, string name)
+        public async Task<ActionResult<IEnumerable<Animal>>> Get(string gender, string name)
         {
             var query = _db.Animals.AsQueryable();
-
-            if (species != null)
-            {
-                query = query.Where(entry => entry.Species == species);
-            }
 
             if (gender != null)
             {
@@ -86,13 +81,24 @@ namespace AnimalShelter.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Animal>> Post(Animal animal)
+        public async Task<ActionResult<Animal>> Post(Animal animal, string type)
         {
-            animal.Admitted = DateTime.Now;
-            _db.Animals.Add(animal);
-            await _db.SaveChangesAsync();
+            var thisSpecies = _db.Species.Include(entry => entry.Animals).FirstOrDefault(entry => entry.Type == type);
 
-            return CreatedAtAction("Post", new { id = animal.AnimalId }, animal);
+            if (thisSpecies != null)
+            {
+                animal.Admitted = DateTime.Now;
+                animal.SpeciesId = thisSpecies.SpeciesId;
+                thisSpecies.Animals.Add(animal);
+                _db.Species.Update(thisSpecies);
+                await _db.SaveChangesAsync();
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+            return CreatedAtAction("Post", new { id = animal.SpeciesId }, thisSpecies);
         }
 
         [HttpDelete("{id}")]
@@ -112,7 +118,7 @@ namespace AnimalShelter.Controllers
 
         private bool AnimalExists(int id)
         {
-            return _db.Animals.Any(e => e.AnimalId == id);
+            return _db.Animals.Any(entry => entry.AnimalId == id);
         }
     }
 }

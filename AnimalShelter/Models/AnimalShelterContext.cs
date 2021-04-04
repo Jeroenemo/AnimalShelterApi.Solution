@@ -11,11 +11,11 @@ namespace AnimalShelter.Models
         {
             builder.Entity<Animal>()
                 .HasData(
-                    new Animal { AnimalId = 1, Name = "Attila", Species = "Cat", Age = 3, Gender = "Male", Admitted = DateTime.Now },
-                    new Animal { AnimalId = 2, Name = "RZA", Species = "Cat", Age = 10, Gender = "Male", Admitted = DateTime.Now },
-                    new Animal { AnimalId = 3, Name = "Maple", Species = "Chicken", Age = 1, Gender = "Female", Admitted = DateTime.Now },
-                    new Animal { AnimalId = 4, Name = "Beatrix", Species = "Chicken", Age = 2, Gender = "Female", Admitted = DateTime.Now },
-                    new Animal { AnimalId = 5, Name = "Petunia", Species = "Donkey", Age = 12, Gender = "Female", Admitted = DateTime.Now }
+                    new Animal { AnimalId = 1, Name = "Attila", Age = 3, Gender = "Male", Admitted = DateTime.Now },
+                    new Animal { AnimalId = 2, Name = "RZA", Age = 10, Gender = "Male", Admitted = DateTime.Now },
+                    new Animal { AnimalId = 3, Name = "Maple", Age = 1, Gender = "Female", Admitted = DateTime.Now },
+                    new Animal { AnimalId = 4, Name = "Beatrix", Age = 2, Gender = "Female", Admitted = DateTime.Now },
+                    new Animal { AnimalId = 5, Name = "Petunia",  Age = 12, Gender = "Female", Admitted = DateTime.Now }
                 );
         }
 

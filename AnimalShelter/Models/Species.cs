@@ -8,7 +8,7 @@ namespace AnimalShelter.Models
         {
             this.Animals = new HashSet<Animal>();
         }
-        public int AnimalId { get; set; }
+        public int SpeciesId { get; set; }
         public string Type { get; set; }
         public virtual ICollection<Animal> Animals { get; set; }
     }
