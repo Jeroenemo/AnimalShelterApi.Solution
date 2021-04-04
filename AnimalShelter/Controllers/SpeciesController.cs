@@ -9,7 +9,7 @@ using System;
 namespace AnimalShelter.Controllers
 {
     [ApiController]
-    [ApiVersion("2.0")]  
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     public class SpeciesController : ControllerBase
     {
@@ -58,6 +58,7 @@ namespace AnimalShelter.Controllers
             _db.Species.Add(species);
             await _db.SaveChangesAsync();
         }
+        
         return CreatedAtAction("Post", new { id = species.SpeciesId }, species);
         }
     }
