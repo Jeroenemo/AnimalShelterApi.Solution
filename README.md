@@ -166,7 +166,7 @@ To explore the Animal Shelter API with Swashbuckle, launch the project using `do
 
 #### Example Query
 ```
-https://localhost:5001/api/Animals?name=attila
+https://localhost:5000/api/Animals?name=attila
 ```
 
 To use default, _don't include_ `name`, `age`, or `gender`.
